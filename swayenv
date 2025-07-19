@@ -1,0 +1,28 @@
+#!/bin/bash
+# swayenv - custom Sway starter script that sets environment variables
+
+# Source system-wide environment
+if [[ -f /etc/sway/environment ]]; then
+    source /etc/sway/environment
+fi
+
+# Source user-specific environment respecting XDG_CONFIG_HOME
+user_env_dir="${XDG_CONFIG_HOME:-$HOME/.config}/sway"
+user_env_file="${user_env_dir}/environment"
+
+if [[ -f "$user_env_file" ]]; then
+    source "$user_env_file"
+elif [[ ! -d "$user_env_dir" ]]; then
+    mkdir -p "$user_env_dir"
+    cat > "$user_env_file" <<'EOF'
+# Sway environment variables
+# This file was generated automatically
+# Set user-specific environment variables here (e.g. QT_QPA_PLATFORMTHEME, GDK_SCALE, etc)
+
+EOF
+    chmod 600 "$user_env_file"
+    echo "Created user environment file: $user_env_file"
+fi
+
+# Launch Sway
+exec sway
