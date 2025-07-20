@@ -22,7 +22,7 @@ Swayenv adds a new desktop entry to the Wayland sessions menu, meaning if your d
 
 Upon installing, Swayenv should automatically be available on your login screen. Use it to launch Sway from now on.
 
-Swayenv comes with some handy default environment variables. You can edit them or add your own in `/etc/sway/environment`.
+Swayenv comes with some handy default environment variables (see [default environment file](environment)). You can edit them or add your own in `/etc/sway/environment`.
 For user-level varables, Swayenv will automatically source the `environment` file in your sway config directory (usually `~/.config/sway/`).
 To add user-level variables, simply add them to the `environment` file. E.g.:
 
