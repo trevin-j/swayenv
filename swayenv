@@ -24,5 +24,9 @@ EOF
     echo "Created user environment file: $user_env_file"
 fi
 
-# Launch Sway
-exec sway
+# Launch Sway with optional args
+if [[ -n "$SWAY_ARGS" ]]; then
+    exec sway $SWAY_ARGS
+else
+    exec sway
+fi

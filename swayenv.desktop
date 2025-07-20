@@ -3,3 +3,4 @@ Name=Sway (Swayenv)
 Comment=Sway with easily-defined environment variables
 Exec=/usr/bin/swayenv
 Type=Application
+DesktopNames=sway;wlroots

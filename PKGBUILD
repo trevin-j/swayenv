@@ -1,6 +1,6 @@
 # Maintainer: Trevin Jones <trevindjones at gmail dot com>
 pkgname=swayenv
-pkgver=1.0
+pkgver=0.1.2
 pkgrel=1
 pkgdesc="Easily define environment variables for Sway on session startup"
 arch=(any)
