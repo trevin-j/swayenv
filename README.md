@@ -33,6 +33,18 @@ export FUN_VARIABLE=COOL
 
 Because Swayenv sources these files, they are valid bash scripts, and can be used to run anything before Sway starts.
 
+### Sway arguments
+
+Swayenv can pass custom arguments to Sway for you. A helpful example is `--unsupported-gpu`, which allows Sway to use proprietary drivers (NVIDIA).
+
+To use this, add the following to your `environment` file:
+
+```
+export SWAY_ARGS="--unsupported-gpu"
+```
+
+Any arguments you add to `SWAY_ARGS` will be passed to Sway on startup.
+
 ## License
 
 MIT
